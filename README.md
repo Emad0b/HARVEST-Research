@@ -20,6 +20,21 @@ Can a pipeline connecting agricultural map interpretation, route planning and si
 
 The dissertation calls the research planner "Hybrid A*". Here that name identifies the project's grid-based planner; it does not imply a demonstrated vehicle-kinematic Hybrid A* implementation with heading and turning-radius constraints.
 
+## Project contribution
+
+HARVEST connects agricultural map interpretation, route planning and Unity execution in an evaluated software prototype. Its research contribution is the integrated pipeline and its evaluation across efficiency, route quality, collision checks and clearance trade-offs.
+
+```mermaid
+flowchart LR
+    A[Field maps] --> B[Occupancy representation]
+    B --> C[Private planner]
+    C --> D[Route checks]
+    D --> E[Unity execution]
+    E --> F[Validation outcomes]
+```
+
+Read the [research contribution, system overview and roadmap](RESEARCH_OVERVIEW.md) for the evidence and proposed next steps.
+
 ## Main findings
 
 These are previously recorded dissertation results, not new experiments run for this repository.
@@ -55,6 +70,18 @@ These original project figures visualise the recorded Python evaluation results.
 ![Raw and smoothed routes compared by mean waypoint count and maximum heading change](images/route-smoothing.png)
 
 *Dissertation Figure 13. Smoothing reduced mean waypoint count from 145 to 14 and mean peak heading change from 41.3 to 24.6 degrees. The figure labels its error bars as standard deviations; they are not confidence intervals.*
+
+### Map density and planning time
+
+![Occupied-area ratio and planning latency for twelve evaluated UAV tiles](images/map-density-latency.png)
+
+*Dissertation Figure 11. Higher occupancy has a positive fitted association with planning latency, but the wide scatter and tile 01 outlier show that occupancy alone does not explain runtime. The line is descriptive, not a causal model.*
+
+### Map density and route length
+
+![Occupied-area ratio and planned path length for twelve evaluated UAV tiles](images/map-density-path-length.png)
+
+*Dissertation Figure 12. The selected tiles show a positive fitted association between occupancy and route length, with substantial map-specific variation. Distances follow the source figure's reported metre units; this is distinct from the inflation-sweep clearance values reported in grid cells.*
 
 ## How Unity was used for validation
 
