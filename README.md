@@ -34,6 +34,40 @@ These are previously recorded dissertation results, not new experiments run for 
 
 See [evaluation methods](METHODS.md), [results and interpretation](RESULTS.md), and [publication boundaries](PUBLICATION_SCOPE.md).
 
+## Research figures
+
+These original project figures visualise the recorded Python evaluation results. They do not expose the private planner implementation and are not Unity screenshots.
+
+### Planning time
+
+![Planning latency for the research planner and Euclidean A-star across three benchmark grid sizes](images/planner-latency.png)
+
+*Dissertation Figure 9. On the 500 x 500 benchmark, recorded planning time was 3.7 ms versus 95.0 ms. These are selected benchmark measurements, not a general runtime guarantee.*
+
+### Search effort
+
+![Expanded-node comparison across benchmark sizes, using a logarithmic vertical axis](images/expanded-nodes.png)
+
+*Dissertation Figure 10. The research planner expanded fewer nodes on all three reported benchmarks. Note the logarithmic vertical axis.*
+
+### Route smoothing
+
+![Raw and smoothed routes compared by mean waypoint count and maximum heading change](images/route-smoothing.png)
+
+*Dissertation Figure 13. Smoothing reduced mean waypoint count from 145 to 14 and mean peak heading change from 41.3 to 24.6 degrees. The figure labels its error bars as standard deviations; they are not confidence intervals.*
+
+## How Unity was used for validation
+
+Unity tested whether the planned routes could be executed by a simulated robot in a virtual field. Python supplied the processed occupancy map and route; Unity built the environment, displayed the route, and followed the returned waypoints. Unity NavMesh was not used for planning.
+
+- **Classic profile:** a flat farm with procedural obstacles and coverage-route execution.
+- **Physical profile:** uneven terrain, configured robot dimensions, collider-backed obstacles and uphill slowdown.
+- **WP2 image-map profile:** processed UAV-map traversability colouring and point-to-point navigation through soil lanes.
+
+Validation checked complete map/route responses, goal completion, runtime collisions and field exits. The dissertation reports goal completion with zero reported collision or field-exit events in its validation runs. The simulation used a kinematic route follower with footprint-aware checks; it did not measure physical robot tracking accuracy or prove field safety.
+
+See [the Unity validation workflow and evidence](UNITY_VALIDATION.md) for the process, simulation profiles, checks and limitations.
+
 ## Limitations and future research
 
 The evaluation uses a small benchmark set and simulated execution. Timing depends on the recorded test environment and should not be treated as a universal speed guarantee. Pre-labelled masks do not establish perception accuracy under field conditions. Occupancy-grid collision checks are not full continuous-body safety proofs.

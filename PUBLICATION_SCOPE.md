@@ -8,6 +8,7 @@ This repository is a deliberately separate documentation release with a fresh Gi
 - Evaluation design and measured quantities.
 - Selected aggregate research outcomes and benchmark summaries.
 - Limitations, provenance and future research directions.
+- Reviewed research-result figures and a high-level Unity validation narrative.
 
 ## Withheld material
 
@@ -23,6 +24,6 @@ Withheld files remain outside this repository. A public GitHub repository cannot
 
 ## Maintenance
 
-The ignore file allows only the four reviewed Markdown documents and the ignore file itself. Review every future commit and its history before publishing. Ignore rules do not remove files already committed and can be bypassed by forced additions; they are an additional safeguard, not an access-control mechanism.
+The ignore file allows only the five reviewed Markdown documents, three explicitly named research-result images and the ignore file itself. Review every future commit and its history before publishing. Ignore rules do not remove files already committed and can be bypassed by forced additions; they are an additional safeguard, not an access-control mechanism.
 
 No ownership claim over standard research methods or third-party algorithms is implied by keeping this project's implementation private.

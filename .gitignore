@@ -5,3 +5,10 @@
 !/METHODS.md
 !/RESULTS.md
 !/PUBLICATION_SCOPE.md
+
+!/UNITY_VALIDATION.md
+!/images/
+/images/*
+!/images/planner-latency.png
+!/images/expanded-nodes.png
+!/images/route-smoothing.png
