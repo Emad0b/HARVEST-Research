@@ -1,0 +1,7 @@
+# Deny by default: only reviewed public documentation may be staged.
+*
+!/.gitignore
+!/README.md
+!/METHODS.md
+!/RESULTS.md
+!/PUBLICATION_SCOPE.md
