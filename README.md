@@ -1,5 +1,7 @@
 # HARVEST: Agricultural Robot Navigation Research
 
+HARVEST studies how a farm robot can use maps built from images to plan routes around obstacles. Read this repository to understand the research question, the simulation and benchmark results, and what still needs testing on a real robot.
+
 HARVEST (Hybrid Autonomous Robot for Visual-mapping Enhanced ST-pathfinding) investigates how agricultural visual maps can support efficient, collision-checked robot navigation. This repository presents the research aims, evaluation methods, reported findings and limitations of an MSc dissertation project.
 
 **Research status:** software prototype evaluated with Python benchmarks and Unity simulation. Physical robot deployment has not been validated.
